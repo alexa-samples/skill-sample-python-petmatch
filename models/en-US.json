@@ -1,0 +1,437 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "pet match",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "PetMatchIntent",
+                    "slots": [
+                        {
+                            "name": "pet",
+                            "type": "AMAZON.Animal"
+                        },
+                        {
+                            "name": "size",
+                            "type": "sizeType",
+                            "samples": [
+                                "{I_Want} {article} {size} {pet}",
+                                "{I_Want} {size}",
+                                "the {size}",
+                                "Something i can {size}",
+                                "{size} size",
+                                "{I_Want} {article} {size} {pet} that {energy}",
+                                "{I_Want} {article} {size} {temperament} {pet}",
+                                "{I_Want} {article} {size} {temperament} to {energy}",
+                                " {temperament} {pet}",
+                                "{energy} energy",
+                                "{size}"
+                            ]
+                        },
+                        {
+                            "name": "temperament",
+                            "type": "temperamentType",
+                            "samples": [
+                                "{temperament} {pet}"
+                            ]
+                        },
+                        {
+                            "name": "I_Want",
+                            "type": "IWantType"
+                        },
+                        {
+                            "name": "energy",
+                            "type": "energyType",
+                            "samples": [
+                                "{energy} energy",
+                                "{I_Want} to {energy}"
+                            ]
+                        },
+                        {
+                            "name": "article",
+                            "type": "articleType"
+                        },
+                        {
+                            "name": "at_the",
+                            "type": "atTheType"
+                        }
+                    ],
+                    "samples": [
+                        "{I_Want} {article} {pet}",
+                        "{I_Want} {article} {size} {temperament} dog",
+                        "find a pet",
+                        "match me",
+                        "{size} {pet}",
+                        "for a {pet}",
+                        "{I_Want} {article} {pet} that is {temperament} and {energy}",
+                        "{energy} {pet}",
+                        "{I_Want} {article} {energy} {pet}",
+                        "{I_Want} {article} {temperament} dog that is {energy} energy"
+                    ]
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "articleType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "a"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "an"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "the"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "atTheType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "at the"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "on the"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "around the"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "in the"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "energyType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "low",
+                                "synonyms": [
+                                    "low energy",
+                                    "to cuddle with",
+                                    "to watch netflix with",
+                                    "lazy"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium",
+                                "synonyms": [
+                                    "medium energy",
+                                    "for my apartment",
+                                    "fun to play with",
+                                    "tug of war",
+                                    "plays tug of war"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "high",
+                                "synonyms": [
+                                    "that I can run with",
+                                    "play frisbee",
+                                    "run",
+                                    "hike",
+                                    "go hiking",
+                                    "play fetch",
+                                    "energetic",
+                                    "high energy"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "IWantType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "my favorite is"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "I prefer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "let's find"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "we like"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "we would like"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "how about"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "I want"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "I like"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "sizeType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "large",
+                                "synonyms": [
+                                    "large size",
+                                    "huge",
+                                    "truck",
+                                    "gigantic",
+                                    "eat me out of house",
+                                    "scary big",
+                                    "ginormous",
+                                    "ride",
+                                    "waist height"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium",
+                                "synonyms": [
+                                    "medium size",
+                                    "bigger than a cat",
+                                    "on the bed",
+                                    "up to my knees",
+                                    "average"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small",
+                                "synonyms": [
+                                    "small size",
+                                    "little",
+                                    "take on an airplane"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tiny",
+                                "synonyms": [
+                                    "tiny size",
+                                    "cheap to feed",
+                                    "teacup",
+                                    "pocket",
+                                    "yippy",
+                                    "carry in my purse",
+                                    "put in my pocket",
+                                    "itty bitty"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "temperamentType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "watch",
+                                "synonyms": [
+                                    "adult",
+                                    "barks at people"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "guard",
+                                "synonyms": [
+                                    "to protect me",
+                                    "protective"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "family",
+                                "synonyms": [
+                                    "hang out",
+                                    "hang out with kids",
+                                    "is kid friendly",
+                                    "good with kids",
+                                    "family friends",
+                                    "gentle with kids"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "AMAZON.Animal",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "mythical_creatures",
+                                "synonyms": [
+                                    "unicorn",
+                                    "chimera",
+                                    "dragon"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "PetMatchIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "pet",
+                            "type": "AMAZON.Animal",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "size",
+                            "type": "sizeType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-PetMatchIntent.IntentSlot-size"
+                            }
+                        },
+                        {
+                            "name": "temperament",
+                            "type": "temperamentType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-PetMatchIntent.IntentSlot-temperament"
+                            }
+                        },
+                        {
+                            "name": "I_Want",
+                            "type": "IWantType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "energy",
+                            "type": "energyType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-PetMatchIntent.IntentSlot-energy"
+                            }
+                        },
+                        {
+                            "name": "article",
+                            "type": "articleType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "at_the",
+                            "type": "atTheType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Intent-PetMatchIntent.IntentSlot-size",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "There are dogs that are tiny, small, medium, and large. Which would you like?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What size of a dog would you like?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-PetMatchIntent.IntentSlot-temperament",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you looking for more of a family dog or a guard dog?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Would you prefer a dog to hang out with kids or to protect you?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-PetMatchIntent.IntentSlot-energy",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you prefer high energy or low energy dogs?"
+                    }
+                ]
+            }
+        ]
+    }
+}
